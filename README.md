@@ -1,6 +1,6 @@
 # Predictive Analysis – Proyek Machine Learning Terapan
 
-Proyek ini bertujuan untuk membangun dan mengembangkan model machine learning yang mampu memprediksi potensi risiko serangan jantung pada seseorang berdasarkan data kesehatan yang tersedia. Dalam implementasinya, proyek ini menguji tiga algoritma pembelajaran mesin berbeda—Random Forest, Decision Tree, dan Naive Bayes—untuk mengevaluasi dan membandingkan performa prediksi dari masing-masing model. Penilaian efektivitas dilakukan dengan menggunakan berbagai metrik evaluasi, seperti akurasi, F1-score, presisi, dan recall, guna menentukan model dengan kinerja paling optimal.
+Proyek ini bertujuan untuk membangun dan mengembangkan model machine learning yang mampu memprediksi potensi risiko serangan jantung pada seseorang berdasarkan data kesehatan yang tersedia. Dalam implementasinya, proyek ini menguji tiga algoritma pembelajaran mesin berbeda, yaitu Random Forest, Decision Tree, dan Naive Bayes untuk mengevaluasi dan membandingkan performa prediksi dari masing-masing model. Penilaian efektivitas dilakukan dengan menggunakan berbagai metrik evaluasi, seperti akurasi, F1-score, presisi, dan recall, guna menentukan model dengan kinerja paling optimal.
 
 ## Struktur Proyek
 
