@@ -8,7 +8,7 @@ Proyek ini bertujuan untuk membangun dan mengembangkan model machine learning ya
 - **Laporan_Predictive_Analysis.md** → Laporan yang mendokumentasikan hasil analisis dan kesimpulan dari proyek.
 - **heart_disease_prediction_dataset.csv** → Dataset utama berisi data kesehatan yang berkaitan dengan risiko penyakit jantung, digunakan sebagai basis prediksi.
 - **requirements.txt** → File daftar pustaka Python yang dibutuhkan untuk menjalankan proyek ini.
-- **images/** → Direktori penyimpanan visualisasi hasil analisis yang digunakan dalam laporan.
+- **Gambar/** → Direktori penyimpanan visualisasi hasil analisis yang digunakan dalam laporan.
 
 ## Tujuan Proyek
 
