@@ -53,14 +53,14 @@ Ketiga studi tersebut menunjukkan bahwa pendekatan berbasis machine learning, te
 Distribusi usia (age) memuncak sekitar 60 tahun, menunjukkan dominasi pasien usia lanjut yang berisiko tinggi terkena serangan jantung. Jenis kelamin (gender) didominasi laki-laki (kode 1), yang cenderung lebih rentan terhadap penyakit jantung. Denyut jantung (heart rate) sebagian besar berada pada kisaran normal (60–120 bpm), namun terdapat outlier ekstrem yang kemungkinan merupakan kesalahan data. Tekanan darah sistolik (systolic blood pressure) terdistribusi simetris pada kisaran umum 100–140 mmHg, sedangkan tekanan diastolik (diastolic blood pressure) sedikit miring ke kanan, dominan pada 60–90 mmHg, dengan beberapa outlier. Kadar gula darah (blood sugar) sangat condong ke kanan, mayoritas di bawah 150 mg/dL, tetapi terdapat nilai ekstrem di atas 500 mg/dL. Nilai CK-MB dan troponin umumnya rendah, namun keduanya menunjukkan distribusi miring ke kanan, mengindikasikan sebagian kecil pasien mengalami peningkatan signifikan akibat kerusakan otot jantung.
 
 ### **Visualisasi Distribusi Kelas Target**
-![Kategori](images/Distribusi_Kategori.png)
+![Kategori](/Gambar/Gambar_Result.png)
 
 Visualisasi ini menggambarkan distribusi dua kategori pada variabel Result. Terlihat bahwa jumlah individu dengan label positive (mengalami serangan jantung) lebih tinggi dibandingkan dengan label negative (tidak mengalami serangan jantung). Kelas positive mendominasi dengan frekuensi yang lebih besar, sedangkan kelas negative tercatat lebih sedikit. Ketimpangan ini menunjukkan adanya ketidakseimbangan kelas dalam dataset, yang merupakan hal umum pada kasus prediksi penyakit, di mana pasien yang mengalami kondisi tertentu (seperti serangan jantung) biasanya lebih sedikit dibandingkan yang tidak.
 
 
 
 ### **Visualisasi Kernel Density Estimation**
-![KDE](images/KDE.png)
+![KDE](/Gambar/Gambar_Result.png)
 Visualisasi KDE memperlihatkan pola hubungan antar fitur dalam dataset. Scatter plot di bawah diagonal menunjukkan sebaran data antar pasangan variabel, sedangkan diagonal menampilkan distribusi masing-masing variabel. Fitur seperti Tekanan Darah dan Denyut Jantung menunjukkan distribusi yang mendekati normal, menandakan pola yang stabil. Gula Darah dan Troponin memiliki distribusi yang terpusat, menunjukkan variasi nilai yang sempit. Sementara itu, variabel biner seperti Jenis Kelamin memperlihatkan distribusi yang terpisah dan tidak memiliki korelasi kuat dengan fitur lain.
 
 
