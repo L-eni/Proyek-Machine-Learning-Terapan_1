@@ -102,7 +102,7 @@ for fitur in variabel_numerik:
   **Alasan Penerapan**: Penyeragaman skala diperlukan agar model tidak berat sebelah terhadap fitur dengan skala besar. Meskipun model seperti Decision Tree dan Random Forest relatif tahan terhadap skala, penerapan standarisasi tetap bermanfaat untuk menjaga konsistensi preprocessing dan mendukung eksperimen dengan berbagai jenis algoritma lain yang lebih sensitif terhadap skala data.
 ```python
 # Variabel numerik pada data_leni
-fitur_numerik = ['Age', 'Gender', 'Heart rate', 'Systolic blood pressure',
+fitur_numerik = ['Age', 'Heart rate', 'Systolic blood pressure',
                  'Diastolic blood pressure', 'Blood sugar', 'CK-MB', 'Troponin']
 
 # Standarisasi fitur numerik menggunakan StandardScaler
@@ -126,7 +126,10 @@ Dalam proyek ini, digunakan tiga algoritma klasifikasi untuk memprediksi kemungk
 
 - **Decision Tree**:  Merupakan algoritma yang menyusun struktur pohon keputusan berdasarkan pembagian data secara bertahap dari atribut yang paling berpengaruh, menggunakan ukuran seperti Gini Impurity atau Entropy. Setiap cabang mencerminkan keputusan atas suatu fitur, sementara daun pohon menunjukkan hasil klasifikasi. Model ini mudah dipahami dan cocok untuk mengidentifikasi pola non-linear. Namun, apabila struktur pohonnya terlalu kompleks, model ini rentan terhadap overfitting. Untuk mengatasinya, dapat digunakan teknik pemangkasan (pruning) atau pembatasan kedalaman pohon.
 - **Random Forest**: Merupakan teknik ensemble learning yang membentuk kumpulan pohon keputusan dari data dan fitur yang dipilih secara acak. Hasil prediksi diperoleh melalui mekanisme suara terbanyak (majority voting). Keunggulan Random Forest terletak pada kestabilannya serta kemampuannya mengurangi risiko overfitting dibandingkan Decision Tree tunggal. Meski begitu, metode ini membutuhkan sumber daya komputasi yang lebih besar karena jumlah model yang dilibatkan cukup banyak.
-- **Naive Bayes**: Berdasarkan pada Teorema Bayes, model ini menghitung probabilitas setiap kelas berdasarkan fitur yang tersedia, dengan anggapan bahwa fitur-fitur tersebut saling bebas (independen). Model ini dikenal karena kesederhanaan dan kecepatannya dalam mengolah data berskala besar. Walaupun asumsi independensi sering kali tidak sepenuhnya sesuai dengan kenyataan, Naive Bayes tetap efektif untuk klasifikasi dasar dan kasus medis dengan kompleksitas rendah.
+- **Naive Bayes**: Berdasarkan pada Teorema Bayes, model ini menghitung probabilitas setiap kelas berdasarkan fitur yang tersedia, dengan anggapan bahwa fitur-fitur tersebut saling bebas (independen). Model ini dikenal karena kesederhanaan dan kecepatannya dalam mengolah data berskala besar. Meskipun asumsi independensi sering kali tidak sepenuhnya sesuai dengan kenyataan, Naive Bayes tetap efektif untuk klasifikasi dasar dan kasus medis dengan kompleksitas rendah.
+Pada proyek ini digunakan Gaussian Naive Bayes (`GaussianNB`) dengan parameter default, yaitu:
+`priors=None`: Prior probabilitas kelas tidak ditentukan secara eksplisit, sehingga akan dihitung otomatis dari distribusi data latih.
+`var_smoothing=1e-9`: Nilai kecil yang ditambahkan ke variansi agar perhitungan lebih stabil dan menghindari pembagian dengan nol.
 
 ##### Tahapan yang Dilakukan dalam Proses Pemodelan:
 
@@ -143,7 +146,7 @@ Model_Decision_Tree = DecisionTreeClassifier(random_state=42)
 Model_Random_Forest = RandomForestClassifier(n_estimators=100, random_state=42)
 ```
 
-- **Naive Bayes**   :
+- **Naive Bayes**   : Naive Bayes dimuat menggunakan parameter default `priors=None` dan `var_smoothing=1e-9`
 ```python
 # Membangun dan melatih model Naive Bayes
 Model_Naive_Bayes = GaussianNB()
@@ -159,7 +162,6 @@ Model_Decision_Tree.fit(X_train, y_train)
 ```python
 Model_Random_Forest.fit(X_train, y_train)
 ```
-
 - **Naive Bayes** dilatih dengan menggunakan data pelatihan `X_train dan y_train` 
 ```python
 Model_Naive_Bayes.fit(X_train, y_train)
