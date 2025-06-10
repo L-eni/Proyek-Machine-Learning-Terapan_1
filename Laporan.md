@@ -48,7 +48,7 @@ Ketiga studi tersebut menunjukkan bahwa pendekatan berbasis machine learning, te
 - **Result**: Label hasil diagnosis, menunjukkan apakah pasien mengalami serangan jantung (1) atau tidak (0).
 
 ### Visualisasi Distribusi Data Numerik
-![Gambar1](/Gambar/Gambar 1.png)
+![Visualisasi Data Numerik](/Gambar/Gambar_Numerik.png)
 
 Distribusi usia (age) memuncak sekitar 60 tahun, menunjukkan dominasi pasien usia lanjut yang berisiko tinggi terkena serangan jantung. Jenis kelamin (gender) didominasi laki-laki (kode 1), yang cenderung lebih rentan terhadap penyakit jantung. Denyut jantung (heart rate) sebagian besar berada pada kisaran normal (60–120 bpm), namun terdapat outlier ekstrem yang kemungkinan merupakan kesalahan data. Tekanan darah sistolik (systolic blood pressure) terdistribusi simetris pada kisaran umum 100–140 mmHg, sedangkan tekanan diastolik (diastolic blood pressure) sedikit miring ke kanan, dominan pada 60–90 mmHg, dengan beberapa outlier. Kadar gula darah (blood sugar) sangat condong ke kanan, mayoritas di bawah 150 mg/dL, tetapi terdapat nilai ekstrem di atas 500 mg/dL. Nilai CK-MB dan troponin umumnya rendah, namun keduanya menunjukkan distribusi miring ke kanan, mengindikasikan sebagian kecil pasien mengalami peningkatan signifikan akibat kerusakan otot jantung.
 
