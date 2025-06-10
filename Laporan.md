@@ -266,7 +266,8 @@ cm_nb = confusion_matrix(y_test, y_pred_nb)
 - **F1-Score**:  
   Metrik **F1-Score**, yang menggabungkan precision dan recall, mencerminkan performa seimbang dari model. **Random Forest** dan **Decision Tree** masing-masing mencapai F1-score 0.98, sedangkan **Naive Bayes** mencatat F1-score 0.87. Artinya, Naive Bayes masih cukup baik, namun tidak seoptimal dua model lainnya dalam menyeimbangkan antara menghindari false positives dan menangkap kasus positif.
 
-**Visualisasi Hasil 3 Klasifikasi**
+### **Visualisasi Hasil 3 Klasifikasi**
+
 ![Perbandingan](/Gambar/Gambar_Perbandingan.png)
 
 Berdasarkan hasil evaluasi model, **Random Forest** dipilih sebagai model terbaik meskipun **Decision Tree** juga menunjukkan performa yang sangat baik dalam menyeimbangkan precision dan recall. Random Forest unggul dengan akurasi tertinggi sebesar **0.9811**, serta nilai **precision dan recall** yang tinggi (**0.98 dan 0.98**), menandakan kemampuannya dalam mengidentifikasi kasus positif maupun negatif secara akurat dan konsisten. Meskipun Decision Tree memiliki akurasi yang hampir sama (**0.9773**) dan F1-score identik (**0.98**), Random Forest tetap menunjukkan sedikit keunggulan dari sisi stabilitas dan generalisasi. Hal ini menjadikannya lebih ideal dalam konteks medis, terutama untuk kebutuhan deteksi dini dan pengambilan keputusan yang cepat. Kemampuannya dalam menangani variabilitas data serta menghasilkan prediksi yang andal menjadikan **Random Forest** sebagai pilihan yang paling sesuai untuk memprediksi risiko serangan jantung.
