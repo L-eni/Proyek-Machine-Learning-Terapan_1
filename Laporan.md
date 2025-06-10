@@ -60,13 +60,13 @@ Visualisasi ini menggambarkan distribusi dua kategori pada variabel Result. Terl
 
 
 ### **Visualisasi Kernel Density Estimation**
-![KDE](/Gambar/Gambar_Result.png)
+![KDE](/Gambar/Gambar_KDE.png)
 Visualisasi KDE memperlihatkan pola hubungan antar fitur dalam dataset. Scatter plot di bawah diagonal menunjukkan sebaran data antar pasangan variabel, sedangkan diagonal menampilkan distribusi masing-masing variabel. Fitur seperti Tekanan Darah dan Denyut Jantung menunjukkan distribusi yang mendekati normal, menandakan pola yang stabil. Gula Darah dan Troponin memiliki distribusi yang terpusat, menunjukkan variasi nilai yang sempit. Sementara itu, variabel biner seperti Jenis Kelamin memperlihatkan distribusi yang terpisah dan tidak memiliki korelasi kuat dengan fitur lain.
 
 
 
 ### **Visualisasi Correlation Matrix**
-![CM](images/Matriks-Korelasi.png)
+![CM](/Gambar/Gambar_CM.png)
 
 Hasil analisis matriks korelasi menunjukkan bahwa Systolic Blood Pressure dan Diastolic Blood Pressure memiliki korelasi cukup kuat sebesar 0,59, yang menandakan adanya keterkaitan erat antara kedua jenis tekanan darah tersebut. Sebaliknya, Age hanya menunjukkan korelasi yang sangat lemah dengan Troponin (0,09) dan hampir tidak berkorelasi dengan Systolic Blood Pressure (0,02), mengindikasikan bahwa usia tidak berpengaruh besar terhadap indikator jantung tertentu dalam dataset ini. Sementara itu, Blood Sugar tampak berdiri sendiri karena memiliki korelasi yang sangat rendah dengan semua fitur lainnya. Korelasi antara Heart Rate dan Diastolic Blood Pressure juga rendah (0,11), namun keduanya tetap relevan sebagai indikator kesehatan jantung. Selain itu, nilai CK-MB tidak menunjukkan hubungan yang kuat dengan fitur lainnya, mencerminkan bahwa enzim ini bervariasi secara independen dalam data.
 
@@ -267,7 +267,7 @@ cm_nb = confusion_matrix(y_test, y_pred_nb)
   Metrik **F1-Score**, yang menggabungkan precision dan recall, mencerminkan performa seimbang dari model. **Random Forest** dan **Decision Tree** masing-masing mencapai F1-score 0.98, sedangkan **Naive Bayes** mencatat F1-score 0.87. Artinya, Naive Bayes masih cukup baik, namun tidak seoptimal dua model lainnya dalam menyeimbangkan antara menghindari false positives dan menangkap kasus positif.
 
 **Visualisasi Hasil 3 Klasifikasi**
-Gambar
+![Perbandingan](/Gambar/Gambar_Perbandingan.png)
 
 Berdasarkan hasil evaluasi model, **Random Forest** dipilih sebagai model terbaik meskipun **Decision Tree** juga menunjukkan performa yang sangat baik dalam menyeimbangkan precision dan recall. Random Forest unggul dengan akurasi tertinggi sebesar **0.9811**, serta nilai **precision dan recall** yang tinggi (**0.98 dan 0.98**), menandakan kemampuannya dalam mengidentifikasi kasus positif maupun negatif secara akurat dan konsisten. Meskipun Decision Tree memiliki akurasi yang hampir sama (**0.9773**) dan F1-score identik (**0.98**), Random Forest tetap menunjukkan sedikit keunggulan dari sisi stabilitas dan generalisasi. Hal ini menjadikannya lebih ideal dalam konteks medis, terutama untuk kebutuhan deteksi dini dan pengambilan keputusan yang cepat. Kemampuannya dalam menangani variabilitas data serta menghasilkan prediksi yang andal menjadikan **Random Forest** sebagai pilihan yang paling sesuai untuk memprediksi risiko serangan jantung.
 
