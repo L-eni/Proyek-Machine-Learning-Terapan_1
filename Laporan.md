@@ -272,7 +272,7 @@ cm_nb = confusion_matrix(y_test, y_pred_nb)
 
 Berdasarkan hasil evaluasi model, **Random Forest** dipilih sebagai model terbaik meskipun **Decision Tree** juga menunjukkan performa yang sangat baik dalam menyeimbangkan precision dan recall. Random Forest unggul dengan akurasi tertinggi sebesar **0.9811**, serta nilai **precision dan recall** yang tinggi (**0.98 dan 0.98**), menandakan kemampuannya dalam mengidentifikasi kasus positif maupun negatif secara akurat dan konsisten. Meskipun Decision Tree memiliki akurasi yang hampir sama (**0.9773**) dan F1-score identik (**0.98**), Random Forest tetap menunjukkan sedikit keunggulan dari sisi stabilitas dan generalisasi. Hal ini menjadikannya lebih ideal dalam konteks medis, terutama untuk kebutuhan deteksi dini dan pengambilan keputusan yang cepat. Kemampuannya dalam menangani variabilitas data serta menghasilkan prediksi yang andal menjadikan **Random Forest** sebagai pilihan yang paling sesuai untuk memprediksi risiko serangan jantung.
 
-### **2. Analisis Berdasarkan Confusion Matrix**
+**2. Analisis Berdasarkan Confusion Matrix**
 
 | Model         | Actual               | Predicted Negatif (0) | Predicted Positif (1) |
 |---------------|----------------------|------------------------|------------------------|
@@ -287,21 +287,20 @@ Berdasarkan hasil evaluasi model, **Random Forest** dipilih sebagai model terbai
 Berdasarkan hasil dari confusion matrix untuk ketiga model, berikut adalah poin-poin penting yang dapat disimpulkan:
 
 ### 1. Kinerja dalam Mengklasifikasikan Kelas Positif (1)
-Kemampuan model dalam mengenali pasien yang benar-benar mengalami serangan jantung (positif) memperlihatkan perbedaan mencolok:
+Kemampuan model dalam mengenali pasien yang benar-benar mengalami serangan jantung (kelas positif) menunjukkan perbedaan yang cukup mencolok:
+- **Random Forest** menunjukkan performa terbaik dengan jumlah **True Positive (TP)** sebanyak **161 kasus** dan hanya **2 kasus False Negative (FN)**. Hal ini menandakan sensitivitas yang sangat tinggi dalam mendeteksi pasien yang benar-benar berisiko.
+- **Decision Tree** juga memberikan hasil yang sangat baik, dengan **160 TP** dan **3 FN**, sehingga performanya dalam mendeteksi kasus positif hampir sebanding dengan Random Forest.
+- Sementara itu, **Naive Bayes** menunjukkan kelemahan yang cukup signifikan, dengan hanya **136 TP** dan **27 FN**. Tingginya jumlah FN ini mengindikasikan bahwa model ini memiliki risiko yang lebih besar dalam melewatkan pasien yang sebenarnya membutuhkan perhatian medis.
 
-- **Random Forest** unggul dengan **161 True Positive (TP)** dan hanya **2 False Negative (FN)**, menjadikannya model paling sensitif dalam mendeteksi kasus positif.
-- **Decision Tree** juga cukup baik, dengan **160 TP** dan **3 FN**, menunjukkan tingkat deteksi positif yang hampir setara dengan Random Forest.
-- Sebaliknya, **Naive Bayes** menunjukkan kelemahan signifikan, dengan hanya **136 TP** dan **27 FN**, sehingga berisiko tinggi melewatkan pasien yang benar-benar berisiko terkena serangan jantung.
 
 ### 2. Kinerja dalam Mengklasifikasikan Kelas Negatif (0)
-Ketiga model menunjukkan performa yang sangat baik dalam mengidentifikasi kasus negatif (tidak mengalami serangan jantung), yang tercermin dari tingginya nilai **True Negative (TN)** dan rendahnya **False Positive (FP)**.
+Ketiga model menunjukkan kinerja yang sangat baik dalam mengidentifikasi kasus negatif (pasien yang tidak mengalami serangan jantung), sebagaimana ditunjukkan oleh tingginya jumlah **True Negative (TN)** dan rendahnya **False Positive (FP)**.
 
-- **Random Forest** dan **Decision Tree** masing-masing berhasil mengklasifikasikan **98 kasus negatif** dengan benar dan hanya melakukan **3 kesalahan klasifikasi (FP)**.
-- **Naive Bayes** sedikit tertinggal, dengan **94 TN** dan **7 FP**, yang menunjukkan kecenderungan lebih besar dalam memberikan prediksi positif yang keliru pada pasien sehat.
+- **Random Forest** dan **Decision Tree** sama-sama berhasil mengklasifikasikan **98 kasus negatif** secara benar, dengan hanya **3 kasus False Positive**, yang berarti keduanya jarang salah mengidentifikasi pasien sehat sebagai penderita.
+- Sementara itu, **Naive Bayes** sedikit tertinggal, dengan **94 TN** dan **7 FP**, menunjukkan kecenderungan yang lebih besar untuk memberikan prediksi positif yang keliru terhadap pasien yang sebenarnya sehat.
 
 
 ### 3. Keunggulan Random Forest
-
 Berdasarkan evaluasi performa secara keseluruhan, **Random Forest** muncul sebagai model terbaik. Berikut beberapa alasan yang mendukung hal tersebut:
 #### a. Stabilitas Model
 Sebagai model **ensemble**, Random Forest menggabungkan beberapa pohon keputusan sehingga lebih tahan terhadap overfitting, berbeda dengan Decision Tree tunggal yang rawan bias terhadap data latih.
@@ -310,7 +309,7 @@ Dengan hanya **2 kasus False Negative**, Random Forest memiliki potensi deteksi 
 #### c. Akurasi Tinggi
 Random Forest mencatat **akurasi tertinggi sebesar 98.11%**, menandakan kemampuannya dalam mengklasifikasikan pasien secara akurat, baik pada kelas negatif maupun positif.
 #### d. Keseimbangan Precision dan Recall
-Dengan nilai **precision sebesar 0.98** dan **recall 0.99**, Random Forest menjaga keseimbangan dalam mendeteksi kasus positif dengan tingkat kesalahan minimum.
+Dengan nilai **precision sebesar 0.98** dan **recall 0.98**, Random Forest menjaga keseimbangan dalam mendeteksi kasus positif dengan tingkat kesalahan minimum.
 #### e. Kinerja Konsisten pada Data Kompleks
 Random Forest dapat menangani fitur-fitur medis yang saling berkorelasi dan memiliki struktur data yang kompleks, menjadikannya cocok untuk prediksi serangan jantung yang melibatkan banyak parameter klinis.
 
