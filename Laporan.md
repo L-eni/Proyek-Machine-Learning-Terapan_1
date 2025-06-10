@@ -19,7 +19,7 @@ Ketiga studi tersebut menunjukkan bahwa pendekatan berbasis machine learning, te
 ## Business Understanding
 
 #### Problem Statements
-1. Bagaimana membangun sistem prediksi yang mampu mengestimasi kemungkinan seseorang mengalami serangan jantung dengan memanfaatkan data parameter kesehatan seperti usia, jenis kelamin, tekanan darah, kadar glukosa darah, serta biomarker jantung (misalnya troponin dan CK-MB)?
+1. Bagaimana membangun sistem prediksi yang mampu mengestimasi kemungkinan seseorang mengalami serangan jantung dengan memanfaatkan data parameter kesehatan seperti usia, jenis kelamin, tekanan darah, kadar glukosa darah, serta biomarker jantung?
 2. Seberapa efektif dan akurat algoritma pembelajaran mesin seperti Decision Tree, Naïve Bayes, dan Random Forest dalam mengidentifikasi risiko serangan jantung jika dibandingkan dengan metode diagnosis tradisional yang selama ini digunakan?
 
 #### Goals
